@@ -1,0 +1,510 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Inter:wght@700&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #8CC461;
+}
+.title{
+    color: #FFF;
+font-family: Roboto;
+font-size: 35px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 4px;
+}
+.scoreboard{
+    display: flex;
+    border-radius: 13px;
+border: 2px solid #FFF;
+background: rgba(28, 48, 120, 0.00);
+width: 63%;
+margin-left: 18vw;
+margin-top: 8vh;
+padding:2vh;
+}
+h2{
+    color: #656565;
+font-family: Roboto;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.7px;
+}
+h4{
+    color: #FFF;
+font-family: Roboto;
+font-size: 29px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-align: center;
+margin-bottom: 1vh;
+}
+h6{
+    color: #FFF;
+font-family: Roboto;
+font-size: 17px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.7px;
+margin-bottom: 5vh;
+margin-left: 9vh;
+}
+.rules{
+    color: #FFF;
+font-family: Roboto;
+font-size: 21px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 2.1px;
+border-radius: 10px;
+border: 2px solid #FFF;
+background: rgba(217, 217, 217, 0.00);
+width:120px;
+text-align: center;
+padding-top: 4px;
+padding-bottom: 4px;
+cursor: pointer;
+position: relative;
+left:166vh;
+bottom: -20vh;
+}
+.rules-shifted {
+    left: 145vh;
+}
+
+.updation{
+    display: flex;
+    width: 35%;
+    margin-left: 27.5vw;
+}
+h3{
+    color: #252525;
+text-align: center;
+font-family: Roboto;
+font-size: 68px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+#computerScore{
+    border-radius: 9px;
+background: #FFF;
+text-align: center;
+margin-right: 4vh;
+width: 500px;
+padding-top: 1vh;
+}
+#yourScore{
+    border-radius: 9px;
+background: #FFF;
+text-align: center;
+width:500px;
+padding-top: 1vh;
+}
+
+
+#rock {
+    position: absolute;
+    right: 2px; 
+    transform: translateX(-50%); 
+    top: -50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+#scissor {
+    position: absolute;
+    left: -20px;
+    transform: translateX(70%);
+    top: -50px;;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+#paper{
+    position: absolute;
+    right:-60px;
+    transform: translateY(120%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.rock{
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 20px 10px;
+    border: 13px solid #0074B6;
+}
+.scissor{
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 20px 29px;
+    border: 13px solid #BD00FF;;
+}
+.paper{
+    background-color: #FFF;
+    border-radius: 50%;
+    padding: 13px 15px;
+    border: 13px solid #FFA943;
+}
+.player-choices{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+
+}
+.line1 {
+    background: rgba(0, 0, 0, 0.64);
+    height: 15px;
+    width: 140px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+.line2{
+    background: rgba(0, 0, 0, 0.64);
+    height: 15px;
+    width: 115px;
+    transform: rotate(56deg);
+    position: absolute;
+    top: 108px;
+    right: 14px;
+}
+.line3{
+    background: rgba(0, 0, 0, 0.64);
+    height: 15px;
+    width: 122px;
+    transform: rotate(125deg);
+    position: absolute;
+    top: 105px;
+    left: 5px;
+}
+.gameRules{
+    border-radius: 13px;
+border: 7px solid #FFF;
+background: #004429;
+width: 220px;
+padding-top: 2vh;
+padding-left: 4vh;
+padding-right: 2vh;
+padding-bottom: 2vh;
+position: relative;
+top: 130px;
+left: 145vh;
+visibility: hidden;
+z-index: 2;
+}
+li{
+    color: #FFF;
+font-family: Roboto;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+list-style-type: square;
+padding-top: 1vh;
+}
+ul li::marker {
+    color: #FFD600;
+    font-size: 20px;
+}
+
+
+.closeButton {
+    position: absolute;
+    top: -35px;
+    right: -30px;
+    border: 4px solid #FFF;
+    border-radius: 50%;
+    background-color: #FF0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #FFF;
+font-family: Dangrek;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+width: 50px;
+height: 50px;
+}
+.middle1 {
+    color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 35px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 3.9px;
+position: relative;
+top: 14.5vh;
+left:4vh;
+}
+.show {
+    visibility: visible;
+}
+.tieRock {
+    display: none;
+    position: absolute;
+    left:30vh;
+    top:45vh;
+    text-align: center;
+}
+.tieScissor{
+    display: none;
+    position: absolute;
+    left:30vh;
+    top:45vh;
+    text-align: center;
+}
+.tiePaper{
+    display: none;
+    position: absolute;
+    left:30vh;
+    top:45vh;
+    text-align: center;
+}
+.tieRock .rock {
+    width: 80px;
+    padding: 32px 25px;
+    border-width: 16px;
+    margin-left:20vh;
+    margin-right: 10vh;
+}
+.tieScissor .scissor{
+    width: 50px;
+    padding: 30px 40px;
+    border-width: 16px;
+    margin-left:20vh;
+    margin-right: 10vh;
+}
+.tiePaper .paper{
+    width: 70px;
+    padding: 30px 34px;
+    border-width: 16px;
+    margin-left:20vh;
+    margin-right: 10vh; 
+}
+.pcWins1 .paper, .pcWins3 .paper , .youWin2 .paper, .youWin3 .paper{
+    width: 70px;
+    padding: 30px 34px;
+    border-width: 16px;
+    margin-left:20vh;
+    margin-right: 10vh;
+}
+.pcWins1 .scissor, .pcWins2 .scissor, .youWin1 .scissor, .youWin2 .scissor{
+    width: 50px;
+    padding: 32px 44px;
+    border-width: 16px;
+    margin-left:20vh;
+    margin-right: 10vh;
+}
+.pcWins1, .pcWins2, .pcWins3 {
+    display: none ;
+    position: absolute;
+    left:30vh;
+    top:45vh;
+
+}
+.pcWins2 .rock, .pcWins3 .rock, .youWin1 .rock, .youWin3 .rock{
+    width: 80px;
+    padding: 32px 25px;
+    border-width: 16px;
+    margin-left:20vh;
+    margin-right: 10vh;
+}
+.youWin1, .youWin2, .youWin3{
+    display: none;
+    position: absolute;
+    left:30vh;
+    top:45vh;
+
+}
+
+
+.replay{
+    color: #6B6B6B;
+font-family: Roboto;
+font-size: 13px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 1.5px;
+border-radius: 9px;
+background: #FFF;
+padding: 1.5vh ;
+border: none;
+position: relative;
+top:18vh;
+left:5vh;
+cursor: pointer;
+width:170px;
+}
+.opp{
+    color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 22px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+letter-spacing: 2.5px;
+position: relative;
+top:15vh;
+left:3.5vh;
+}
+.yp{
+    position: relative;
+    left: 15vh;
+    z-index: 1;
+}
+.first{
+    border-radius: 50%;
+    border: 30px solid #3B6720;
+    
+}
+.second{
+    border-radius: 50%;
+    border: 18px solid #1DA82BC9;
+}
+.third{
+    border-radius: 50%;
+border: 18px solid rgba(46, 154, 37, 0.39);
+position: relative;
+    left: 12vh;
+    bottom:8vh;
+}
+.first .scissor, .first .rock, .first .paper{
+    margin: 0;
+    
+}
+.youWin1 .middle, .youWin2 .middle, .youWin3 .middle{
+    position: relative;
+    left: 9vh;
+}
+.next{
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.1px;
+    border-radius: 10px;
+    border: 2px solid #FFF;
+    background: rgba(217, 217, 217, 0.00);
+    width:120px;
+    text-align: center;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    position: relative;
+    left:22vh;
+    top: 43.5vh;
+}
+#trophy{
+    position: absolute;
+    left: 82vh;
+    top: 28vh;
+}
+.hurray{
+    position: relative;
+    color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 82px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 7px;
+top: 57vh;
+}
+.won{
+    position: relative;
+    color: #FFF;
+text-align: center;
+font-family: Roboto;
+font-size: 35px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 4.1px;
+top: 57vh;
+}
+.main .replay{
+    position: relative;
+    top: 62vh;
+    left: 83.6vh;
+}
+.button-wrapper{
+    position: relative;
+    bottom: 9.5vh;
+}
+#star1{
+    position: relative;
+    left: 107.5vh;
+    top: 7.6vh;
+}
+#star2{
+    position: relative;
+    left: 47vh;
+    top:1vh;
+    width: 115px;
+}
+#star3{
+    position: relative;
+    left: 70vh;
+    top: -18vh;
+    width: 102px;
+}
+#star4{
+    position: relative;
+    left: 27vh;
+    top: -14vh;
+    width: 70px;
+}
+#star5{
+    position: relative;
+    left: 24vh;
+    top: -25vh;
+    width: 35px;
+}
+#star6{
+    position: relative;
+    left: 30vh;
+    top: -20vh;
+    width: 35px;
+}
+#star7{
+    position: relative;
+    left: 52vh;
+    top: -14vh;
+    width: 35px;
+}
+#star8{
+    position: relative;
+    left: 7vh;
+    top: 8vh;
+    width: 35px;
+}
+.gr-shift{
+    position: relative;
+    bottom: 9.5vh;
+}
